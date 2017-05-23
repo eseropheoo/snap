@@ -1,0 +1,14 @@
+* {
+	background-color: white;
+}
+
+h1 {
+
+	margin-left: 450px;
+}
+
+#card {
+	height: 200px;
+	width: 100px;
+	background-color: black;
+}
