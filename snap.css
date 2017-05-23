@@ -7,8 +7,10 @@ h1 {
 	margin-left: 450px;
 }
 
-#card {
+.card {
 	height: 200px;
 	width: 100px;
-	background-color: black;
+	background-color: #edeeef;
+	margin: 1rem;
+	display: inline-block;
 }

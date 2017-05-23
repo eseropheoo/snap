@@ -26,10 +26,10 @@ function shuffle(array) {
   return array;
 }
 
-var blackSpadesCard = [1, 2, 3, 4, 5];
-var blackClubsCard = [1, 2, 3, 4, 5];
-var redHeartsCard = [1, 2, 3, 4, 5];
-var redDiamondsCard = [1, 2, 3, 4, 5];
+var blackSpadesCard = [1, 2, 3, 4];
+var blackClubsCard = [1, 2, 3, 4];
+var redHeartsCard = [1, 2, 3, 4];
+var redDiamondsCard = [1, 2, 3, 4];
 
 
 blackSpadesCard = shuffle(blackSpadesCard);
@@ -40,5 +40,14 @@ redDiamondsCard = shuffle(redDiamondsCard);
 console.log('redDiamondsCard', redDiamondsCard);
 redHeartsCard = shuffle(redHeartsCard);
 console.log('redDiamondsCard', redDiamondsCard);
+
+for (var i = 0; i < blackClubsCard.length; i++) {
+	console.log(blackClubsCard);
+	$("div#card01").html(blackClubsCard[i++]);
+	$("div#card02").html(blackClubsCard[i++]);
+	$("div#card03").html(blackClubsCard[i++]);
+	$("div#card04").html(blackClubsCard[i++]);
+}
+
 
 });
