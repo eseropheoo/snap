@@ -12,8 +12,18 @@ h1 {
 	width: 150px;
 	background-color: #edeeef;
 	margin-left: 500px;
-	margin-top: 230px;
+	margin-top: 200px;
 	display: inline-block;
+}
+
+#snap {
+	height: 100px;
+	width: 170px;
+	background-color: green;
+	text-align: center;
+	margin-left: 485px;
+	margin-top: 50px;
+	line-height: 90px;
 }
 
 
