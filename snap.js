@@ -1,7 +1,7 @@
 $(function() {
 
 
-function shuffle(array) {
+function shufflePack(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
 
   // While there remain elements to shuffle...
@@ -28,11 +28,8 @@ var cards = ["1 &clubs;", "2 &clubs;", "3 &clubs;", "4 &clubs;", "5 &clubs;", "6
 shuffle = [];
 var x;
 
-var player = cards.splice(0, 25);
-var cpu = cards.splice(26, 51);
-
-
-
+// var player = cards.slice(0, 26);
+// var cpu = cards.slice(26, 52);
 
    function rdm(n){
  	 x = Math.floor(Math.random() * n);
@@ -40,36 +37,49 @@ var cpu = cards.splice(26, 51);
 
 for( i = 0; i < 52; i++) {
 	rdm(cards.length);
-	
 	shuffle.push(cards[x]);
 	cards.splice(x, 1);
-	// console.log(shuffle);
 	// show random suites & numbers on html.
 	$($(".card")[i]).html(shuffle[i]);
 	// console.log($('.card'))
-	
+  // console.log("Cards:", cards[i])
 }
-function playerMove(player) {
+// console.log(cards)
+// console.log(shuffle)
+
+  var player = shuffle;
+  var cpu = player.splice(26, 52);
+  // shuffle.push(cards[x]);
+
+  console.log("player", player)
+  console.log("cpu", cpu)
+
+  // cards = shufflePack(cards);
+  // console.log("cards", cards);
+  // playerCards = shufflePack(playerCards);
+  // console.log("playerCards", playerCards);
+
+function playerMove(playerCards) {
     for (i =0; i < 25; i++){
-      rdm(player);
-      shuffle().push(player[x]);
-      player.splice(x, 1);
-      console.log("playerMove", player);
+      rdm(playerCards);
+      playerCards = shufflePack(playerCards);
+      shuffle.push(playerCards[x]);
+      playerCards.splice(x, 1);
+      console.log("playerCards", playerCards[i])
     }
   }
-      console.log("playerMove", player);
+      // console.log("playerCards", playerCards);
+
     
-    
-  function cpuMove (cpu) {
+  function cpuMove (cpuCards) {
     for (i =26; i < 51; i++) {
-      rdm(cpu);
-      shuffle.push(cpu[x]);
-      cpu.splice(x, 1);
-      console.log("cpuMove", cpu);   
+      rdm(cpuCards);
+      shuffle.push(cpuCards[x]);
+      cpuCards.splice(x, 1);
     }
+    console.log("cpuMove", cpuCards); 
 
   }
-    console.log("cpuMove", cpu); 
 
  })
 
