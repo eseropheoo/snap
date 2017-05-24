@@ -1,6 +1,3 @@
-
-
-
 function shufflePack(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -28,8 +25,7 @@ var cards = ["1 &clubs;", "2 &clubs;", "3 &clubs;", "4 &clubs;", "5 &clubs;", "6
 var shuffle = [];
 var x;
 
-// var player = cards.slice(0, 26);
-// var cpu = cards.slice(26, 52);
+
 
 function rdm(n){
 	x = Math.floor(Math.random() * n);
@@ -39,25 +35,21 @@ for( i = 0; i < 52; i++) {
 	rdm(cards.length);
 	shuffle.push(cards[x]);
 	cards.splice(x, 1);
-	// show random suites & numbers on html.
+	
 	$($(".card")[i]).html(shuffle[i]);
-	// console.log($('.card'))
-  // console.log("Cards:", cards[i])
+	
 }
-// console.log(cards)
-// console.log(shuffle)
+
 
   var player = shuffle;
   var cpu = player.splice(26, 52);
-  // shuffle.push(cards[x]);
+  var discard = [];
+  
 
   console.log("player", player)
   console.log("cpu", cpu)
 
-  // cards = shufflePack(cards);
-  // console.log("cards", cards);
-  // playerCards = shufflePack(playerCards);
-  // console.log("playerCards", playerCards);
+  
 
 function playerMove(playerCards) {
     for (i =0; i < 25; i++){
@@ -68,18 +60,11 @@ function playerMove(playerCards) {
       console.log("playerCards", playerCards[i])
     }
   }
-      // console.log("playerCards", playerCards);
+      
 
     
-function cpuMove (cpuCards) {
-  for (i =26; i < 51; i++) {
-    rdm(cpuCards);
-    shuffle.push(cpuCards[x]);
-    cpuCards.splice(x, 1);
-  }
-  console.log("cpuMove", cpuCards); 
 
-}
+
 
  
 
