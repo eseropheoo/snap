@@ -16,7 +16,16 @@ $(".card").click(function() {
 	setTimeout(changeCard, 5000);
 })
 
- 
+
+
+
+function checkSnap (){
+ var currCard = discard[discard.length-1];
+ var secLastCard = discard[discard.length-2];
+
+if( currCard[0] === secLastCard[0])
+
+ }
 
 
 		
