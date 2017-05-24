@@ -4,14 +4,17 @@
 
 h1 {
 
-	margin-left: 450px;
+	margin-left: 500px;
 }
 
 .card {
 	height: 200px;
-	width: 100px;
+	width: 150px;
 	background-color: #edeeef;
-	margin: 1rem;
+	margin-left: 500px;
+	margin-top: 230px;
 	display: inline-block;
 }
+
+
 

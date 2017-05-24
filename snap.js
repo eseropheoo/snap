@@ -1,11 +1,5 @@
 $(function() {
 
-// Create a variable for an array of 
-// random
-// on click
-// if statements to match
-// alert
-// 
 
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
@@ -26,72 +20,57 @@ function shuffle(array) {
   return array;
 }
 
-// var blackSpadesCard = [1, 2, 3, 4];
-// var blackClubsCard = [1, 2, 3, 4];
-// var redHeartsCard = [1, 2, 3, 4];
-// var redDiamondsCard = [1, 2, 3, 4];
-var cards = ["1 blackClubs", "2 blackClubs", "3 blackClubs", "4 blackClubs", "5 blackSpadesCard", "6 blackSpadesCard", 
-"7 blackSpadesCard","8 blackSpadesCard" , "9 redHeartsCard", "10 redHeartsCard", "11 redHeartsCard", "12 redHeartsCard", "13 redDiamondsCard", "14 redDiamondsCard", "15 redDiamondsCard", "16 redDiamondsCard"];
+
+var cards = ["1 &clubs;", "2 &clubs;", "3 &clubs;", "4 &clubs;", "5 &clubs;", "6 &clubs;", "7 &clubs;", "8 &clubs;", "9 &clubs;", "10 &clubs;" , "J &clubs;", "Q &clubs;", "K &clubs;", 
+"1 &spades;", "2 &spades;", "3 &spades;","4 &spades;", "5 &spades;", "6 &spades;", "7 &spades;", "8 &spades;", "9 &spades;", "10 &spades;", "J &spades;", "Q &spades;", "K &spades;",
+ "1 &hearts;", "2 &hearts;", "3 &hearts;", "4 &hearts;", "5 &hearts;", "6 &hearts;", "7 &hearts;", "8 &hearts;", "9 &hearts;", "10 &hearts;","J &hearts;", "Q &hearts;", "K &hearts;",
+ "1 &#9830;", "2 &#9830;", "3 &#9830;", "4 &#9830;", "5 &#9830;", "6 &#9830;", "7 &#9830;", "8 &#9830;", "9 &#9830;", "10 &#9830;", "J  &#9830;", "Q &#9830;", "K &#9830;"]
 shuffle = [];
 var x;
-// blackSpadesCard = shuffle(blackSpadesCard);
-// console.log('blackSpadesCard', blackSpadesCard);
-// blackClubsCard = shuffle(blackClubsCard);
-// console.log('blackClubsCard', blackClubsCard);
-// redDiamondsCard = shuffle(redDiamondsCard);
-// console.log('redDiamondsCard', redDiamondsCard);
-// redHeartsCard = shuffle(redHeartsCard);
-// console.log('redHeartsCard', redHeartsCard);
-// cardSuite = shuffle(cardSuite);
-// console.log('cardSuite', cardSuite);
+
+var player = cards.splice(0, 25);
+var cpu = cards.splice(26, 51);
 
 
 
-// for (var i = 0; i <= cardNo.length; i++) {
-// 	console.log(cardNo);
-	// for (var j = 0; blackClubsCard.length; j++) {
-	// 	console.log(blackClubsCard);
-	// 	$("div#card" + [i++]).html(blackClubsCard[j++]);
-	// }
-// }
-
-// for (var i = 0; i < blackClubsCard.length; i++) {
-// 		console.log(blackClubsCard);
-// 		$("div#card01").html(blackClubsCard[i++]);
-// 		$("div#card02").html(blackClubsCard[i++]);
-// 		$("div#card03").html(blackClubsCard[i++]);
-// 		$("div#card04").html(blackClubsCard[i++]);
-// 	}
-
-// for (var i =0; i< blackSpadesCard.length; i++){
-// 		console.log(blackSpadesCard);
-// 		$("div#card05").html(blackSpadesCard[i++]);
-// 		$("div#card06").html(blackSpadesCard[i++]);
-// 		$("div#card07").html(blackSpadesCard[i++]);
-// 		$("div#card08").html(blackSpadesCard[i++]);
-// }
 
    function rdm(n){
  	 x = Math.floor(Math.random() * n);
  }
 
-for( i = 0; i < 16; i++) {
+for( i = 0; i < 52; i++) {
 	rdm(cards.length);
 	
 	shuffle.push(cards[x]);
 	cards.splice(x, 1);
-	console.log(shuffle);
+	// console.log(shuffle);
+	// show random suites & numbers on html.
 	$($(".card")[i]).html(shuffle[i]);
-	console.log($('.card'))
+	// console.log($('.card'))
 	
 }
+function playerMove(player) {
+    for (i =0; i < 25; i++){
+      rdm(player);
+      shuffle().push(player[x]);
+      player.splice(x, 1);
+      console.log("playerMove", player);
+    }
+  }
+      console.log("playerMove", player);
+    
+    
+  function cpuMove (cpu) {
+    for (i =26; i < 51; i++) {
+      rdm(cpu);
+      shuffle.push(cpu[x]);
+      cpu.splice(x, 1);
+      console.log("cpuMove", cpu);   
+    }
+
+  }
+    console.log("cpuMove", cpu); 
+
+ })
 
 
-
-
-
-
-
-
-
-})
