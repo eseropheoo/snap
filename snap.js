@@ -44,7 +44,7 @@ for( i = 0; i < 52; i++) {
   var player = shuffle;
   var cpu = player.splice(26, 52);
   var discard = [];
-  
+
 
   console.log("player", player)
   console.log("cpu", cpu)
