@@ -26,22 +26,7 @@ function checkSnap(person) {
 		}, 2000);
 	}
 
-	// if (currCard && secLastCard && currCard[0] === secLastCard[0]){
-	// 	$("#snapAlert").html(person + " has snapped!");
-			
-		
-		
-	// 	if(person === "player") {
-	// 		player = player.concat(discard);
-	// 		console.log("discard in player");
-	// 		discard = []
-
-	// 	} else if(person === "cpu"){
-	// 		cpu = cpu.concat(discard);
-	// 		console.log("discard in player");
-	// 		discard = [];
-	// 	}
-	// }
+	
 }
 
 
@@ -54,6 +39,7 @@ function changeCard() {
 	// 4. check to see if cpu has any cards left, if not, they have lost the game. Link victory page
 	if(cpu.length ===  0){
 		alert("you won");
+		return ;
 
 	}
 	discard.push(newcard);
@@ -62,7 +48,7 @@ function changeCard() {
 
 
 	computerSnapTimeout = setTimeout(function () {
-		checkSnap("computer")
+		checkSnap("cpu")
 	}, 2500);
 	
 	$("#person").html("players turn");
@@ -76,6 +62,7 @@ $(".card").click(function() {
 	// 4.check to see if player has any chards left, if not, they have lost the game. Link Loss page
 	if(player.length === 0){
 		alert("you lost");
+		return;
 	}
 	discard.push(newcard);
 	console.log("player discard", newcard);
