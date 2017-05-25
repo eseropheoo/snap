@@ -1,14 +1,18 @@
-* {
-	background-image: white;
-
+body {
+	background-image: url(http://www.acepokersolutions.com/poker-software/bovada-mods/APS-t1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
 }
 
 h1 {
 
-	margin-left: 500px;
+	margin-left: 580px;
 }
 
-
+.whiteText {
+	color: white;
+}
 
 
 
@@ -17,24 +21,40 @@ h1 {
 	height: 200px;
 	width: 150px;
 	background-color: #edeeef;
-	margin-left: 500px;
+	margin-left: 570px;
 	margin-top: 100px;
 	display: inline-block;
+	border-radius: 13px;
+    padding: 5px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 51px;
 }
 
 #snap {
 	height: 100px;
 	width: 170px;
-	background-color: green;
+	font-size: 25px;
+	
 	text-align: center;
-	margin-left: 485px;
+	margin-left: 570px;
 	margin-top: 50px;
 	line-height: 90px;
+
+	
+
+
+
+}
+#snap:hover {
+	-webkit-box-shadow: -12px 15px 115px 23px rgba(2,3,2,1);
+-moz-box-shadow: -12px 15px 115px 23px rgba(2,3,2,1);
+box-shadow: -12px 15px 115px 23px rgba(2,3,2,1);
 }
 
 #person {
 	font-size: 28px;
-	color: black; 
+	color: white; 
 	margin-left: 360px;
 	margin-top: 100px;
 }
@@ -43,7 +63,7 @@ h1 {
 	
 	font-size: 28px;
 	font-style: bold;
-	color: red;
+	color: white;
 	margin-top:-480px;
 	margin-left: 600px;
 	height: 70px;
