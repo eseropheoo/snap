@@ -21,8 +21,27 @@ function checkSnap(person) {
 			console.log("discard in player");
 			discard = [];
 		}
-	} 
-	
+		setTimeout( function() {
+			$("#snapAlert").html("");
+		}, 2000);
+	}
+
+	// if (currCard && secLastCard && currCard[0] === secLastCard[0]){
+	// 	$("#snapAlert").html(person + " has snapped!");
+			
+		
+		
+	// 	if(person === "player") {
+	// 		player = player.concat(discard);
+	// 		console.log("discard in player");
+	// 		discard = []
+
+	// 	} else if(person === "cpu"){
+	// 		cpu = cpu.concat(discard);
+	// 		console.log("discard in player");
+	// 		discard = [];
+	// 	}
+	// }
 }
 
 
@@ -62,7 +81,7 @@ $(".card").click(function() {
 	console.log("player discard", newcard);
 	$("#card01").html(newcard);
 
-	setTimeout(changeCard, 3000);
+	setTimeout(changeCard, 2500);
 	
 	$("#person").html("computer turn");
 })
@@ -70,7 +89,7 @@ $(".card").click(function() {
  
 $("#snap").click(function(){
 	clearTimeout(computerSnapTimeout);
-	checkSnap("player");	
+	checkSnap("player");
 })	
 
  
