@@ -7,9 +7,10 @@ function checkSnap(person) {
 	var secLastCard = discard[discard.length-2];
 
 	if (currCard && secLastCard && currCard[0] === secLastCard[0]){
-		alert(person +  " snap!")
-		// 2. output snap to screen
-		// 3. move all cards from discard array to player or cpu
+		$("#snapAlert").html(person + " has snapped!");
+			
+		
+		
 		if(person === "player") {
 			player = player.concat(discard);
 			console.log("discard in player");
@@ -31,9 +32,10 @@ function changeCard() {
 	
 	console.log("playing a cpu card...")
 	var newcard = cpu.pop();
-	// 4. check to see if cpu has any cards left, if not, they have lost the game
-	if(cpu ===  'undefined'){
+	// 4. check to see if cpu has any cards left, if not, they have lost the game. Link victory page
+	if(cpu.length ===  0){
 		alert("you won");
+
 	}
 	discard.push(newcard);
 	console.log("cpu discard", newcard);
@@ -52,8 +54,8 @@ function changeCard() {
 $(".card").click(function() {
 	console.log("Playing a player card...")
 	var newcard = shuffle.pop();
-	// 4.check to see if player has any chards left, if not, they have lost the game
-	if(player === 'undefined'){
+	// 4.check to see if player has any chards left, if not, they have lost the game. Link Loss page
+	if(player.length === 0){
 		alert("you lost");
 	}
 	discard.push(newcard);
