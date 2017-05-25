@@ -18,17 +18,18 @@ h1 {
 
 
 .card {
-	height: 200px;
-	width: 150px;
-	background-color: #edeeef;
-	margin-left: 570px;
+	height: 190px;
+    width: 146px;
+	background-image: url("./cardBack.jpg");
+	background-repeat: no-repeat;
+	margin-left: 600px;
 	margin-top: 100px;
 	display: inline-block;
 	border-radius: 13px;
     padding: 5px;
     line-height: 200px;
+    font-size: 25px;
     text-align: center;
-    font-size: 51px;
 }
 
 #snap {
