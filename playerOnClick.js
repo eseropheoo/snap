@@ -9,10 +9,12 @@ function checkSnap(person) {
 
 	if (currCard && secLastCard && currCard[0] === secLastCard[0]){
 		$("#snapAlert").html(person + " has snapped!");
-		$(".gif").show();
+
+		
 		
 		
 		if(person === "player") {
+			$(".gif").show();
 			player = player.concat(discard);
 			console.log("discard in player");
 			discard = []

@@ -1,0 +1,12 @@
+body {
+	background-image: url("winGold.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1 {
+	color: red;
+	margin-left: 500px;
+	margin-top: 145px;
+
+}
