@@ -41,15 +41,11 @@ h1 {
 	margin-top: 50px;
 	line-height: 90px;
 
-	
-
-
-
 }
 #snap:hover {
 	-webkit-box-shadow: -12px 15px 115px 23px rgba(2,3,2,1);
--moz-box-shadow: -12px 15px 115px 23px rgba(2,3,2,1);
-box-shadow: -12px 15px 115px 23px rgba(2,3,2,1);
+    -moz-box-shadow: -12px 15px 115px 23px rgba(2,3,2,1);
+   box-shadow: -12px 15px 115px 23px rgba(2,3,2,1);
 }
 
 #person {
@@ -71,4 +67,13 @@ box-shadow: -12px 15px 115px 23px rgba(2,3,2,1);
 	
 }
 
+.gif{
 
+	height: 300px;
+	width: 300px;
+	background-image: url(https://media.giphy.com/media/ui1hpJSyBDWlG/giphy.gif);
+	background-repeat: no-repeat;
+	margin-left: 880px;
+	margin-top: 60px;
+
+}

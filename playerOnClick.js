@@ -1,6 +1,7 @@
 var computerSnapTimeout;
 var start = $("#person").html("player starts");
 
+$(".gif").hide();
 
 function checkSnap(person) {
 	var currCard = discard[discard.length-1];
@@ -8,7 +9,7 @@ function checkSnap(person) {
 
 	if (currCard && secLastCard && currCard[0] === secLastCard[0]){
 		$("#snapAlert").html(person + " has snapped!");
-			
+		$(".gif").show();
 		
 		
 		if(person === "player") {
@@ -23,6 +24,9 @@ function checkSnap(person) {
 		}
 		setTimeout( function() {
 			$("#snapAlert").html("");
+		}, 2000);
+		setTimeout( function() {
+			$(".gif").hide();
 		}, 2000);
 	}
 
