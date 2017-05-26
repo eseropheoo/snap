@@ -46,7 +46,7 @@ h1 {
 #snap:hover {
 	-webkit-box-shadow: -12px 15px 115px 23px rgba(2,3,2,1);
     -moz-box-shadow: -12px 15px 115px 23px rgba(2,3,2,1);
-   box-shadow: -12px 15px 115px 23px rgba(2,3,2,1);
+     box-shadow: -12px 15px 115px 23px rgba(2,3,2,1);
 }
 
 #person {
