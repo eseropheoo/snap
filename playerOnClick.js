@@ -41,7 +41,7 @@ function changeCard() {
 	var newcard = cpu.pop();
 	// 4. check to see if cpu has any cards left, if not, they have lost the game. Link victory page
 	if(cpu.length ===  0){
-		window.location.href = "winner.html";
+		window.location.href = "lose.html";
 		return ;
 
 	}
@@ -64,7 +64,7 @@ $(".card").click(function() {
 	var newcard = shuffle.pop();
 	// 4.check to see if player has any chards left, if not, they have lost the game. Link Loss page
 	if(shuffle.length === 0){
-		window.location.href = "lose.html";
+		window.location.href = "winner.html";
 		return;
 	}
 	discard.push(newcard);
