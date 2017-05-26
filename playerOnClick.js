@@ -63,7 +63,7 @@ $(".card").click(function() {
 	console.log("Playing a player card...")
 	var newcard = shuffle.pop();
 	// 4.check to see if player has any chards left, if not, they have lost the game. Link Loss page
-	if(player.length === 0){
+	if(shuffle.length === 0){
 		window.location.href = "lose.html";
 		return;
 	}
