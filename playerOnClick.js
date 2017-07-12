@@ -41,7 +41,7 @@ function changeCard() {
 	var newcard = cpu.pop();
 	// 4. check to see if cpu has any cards left, if not, they have lost the game. Link victory page
 	if(cpu.length ===  0){
-		window.location.href = "lose.html";
+		window.location.href = "winner.html";
 		return ;
 
 	}

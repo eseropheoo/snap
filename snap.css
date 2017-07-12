@@ -20,7 +20,7 @@ h1 {
 .card {
 	height: 190px;
     width: 146px;
-	background-image: url("./cardBack.jpg");
+	background-image: url("image/cardBack.jpg");
 	background-repeat: no-repeat;
 	margin-left: 600px;
 	margin-top: 100px;
