@@ -13,12 +13,12 @@ function checkSnap(person) {
 		if(person === "player") {
 			$(".gif").show();
 			player = player.concat(discard);
-			console.log("discard in player");
+			
 			discard = []
 
 		} else if(person === "cpu"){
 			cpu = cpu.concat(discard);
-			console.log("discard in player");
+			
 			discard = [];
 		}
 		setTimeout( function() {
@@ -37,7 +37,7 @@ function checkSnap(person) {
 function changeCard() {
 	checkSnap("cpu");
 	
-	console.log("playing a cpu card...")
+	
 	var newcard = cpu.pop();
 	// 4. check to see if cpu has any cards left, if not, they have lost the game. Link victory page
 	if(cpu.length ===  0){
@@ -60,7 +60,7 @@ function changeCard() {
 	
 
 $(".card").click(function() {
-	console.log("Playing a player card...")
+	
 	var newcard = shuffle.pop();
 	// 4.check to see if player has any chards left, if not, they have lost the game. Link Loss page
 	if(shuffle.length === 0){
@@ -68,7 +68,7 @@ $(".card").click(function() {
 		return;
 	}
 	discard.push(newcard);
-	console.log("player discard", newcard);
+	
 	$("#card01").html(newcard);
 
 	setTimeout(changeCard, 2500);
